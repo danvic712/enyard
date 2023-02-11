@@ -1,8 +1,8 @@
 {
-  "name": "ingos-swagger-finder",
+  "name": "enyard",
   "private": true,
   "version": "1.0.0",
-  "author": "Dnvic Wang",
+  "author": "Danvic Wang",
   "license": "MIT",
   "scripts": {
     "start": "echo Starting the development server && vite --host ::",

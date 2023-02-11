@@ -30,6 +30,7 @@
 
     <ItemGroup>
       <Content Remove="Logs\**" />
+      <Content Include="ClientApp\package.json" />
     </ItemGroup>
 
     <ItemGroup>
