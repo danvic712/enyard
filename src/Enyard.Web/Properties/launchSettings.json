@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Ingos.SwaggerFinder.Web": {
+    "Enyard.Web": {
       "commandName": "Project",
       "launchBrowser": true,
       "applicationUrl": "https://localhost:7188;http://localhost:5230",

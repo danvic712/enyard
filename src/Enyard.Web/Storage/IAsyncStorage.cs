@@ -8,24 +8,25 @@
 // Description:
 // -----------------------------------------------------------------------
 
-using Ingos.SwaggerFinder.Web.Models;
+using Enyard.Web.Entities;
+using Endpoint = Enyard.Web.Entities.Endpoint;
 
-namespace Ingos.SwaggerFinder.Web.Storage
+namespace Enyard.Web.Storage
 {
     public interface IAsyncStorage
     {
-        Task<Tuple<long, IList<Portfolio>>> GetPagedListAsync(string keyword, string orderBy = "", int page = 1,
+        Task<Tuple<long, IList<Group>>> GetPagedListAsync(string keyword, string orderBy = "", int page = 1,
             int size = 20);
 
-        Task<Portfolio> GetByIdAsync(Guid id);
+        Task<Group> GetByIdAsync(Guid id);
 
-        Task<Portfolio> InsertAsync(Portfolio portfolio);
+        Task<Group> InsertAsync(Group portfolio);
 
-        Task<Portfolio> UpdateAsync(Guid id);
+        Task<Group> UpdateAsync(Guid id);
 
         Task<bool> DeleteAsync(Guid id);
 
-        Task<Tuple<long, IList<Module>>> GetEndpointPagedListAsync(Guid portfolioId, string keyword,
+        Task<Tuple<long, IList<Entities.Endpoint>>> GetEndpointPagedListAsync(Guid portfolioId, string keyword,
             string orderBy = "", int page = 1,
             int size = 20);
     }

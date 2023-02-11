@@ -1,4 +1,4 @@
-namespace Ingos.SwaggerFinder.Tests;
+namespace Enyard.Tests;
 
 public class UnitTest1
 {

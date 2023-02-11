@@ -42,6 +42,8 @@
 
     <ItemGroup>
       <None Remove="Logs\**" />
+      <None Include="Localization\SwaggerFinder\en.json" />
+      <None Include="Localization\SwaggerFinder\zh-Hans.json" />
     </ItemGroup>
 
     <ItemGroup>
@@ -49,6 +51,11 @@
         <Content Remove="$(SpaRoot)**" />
         <None Remove="$(SpaRoot)**" />
         <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Localization\SwaggerFinder\en.json" />
+      <_ContentIncludedByDefault Remove="Localization\SwaggerFinder\zh-Hans.json" />
     </ItemGroup>
 
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

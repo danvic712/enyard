@@ -10,7 +10,7 @@
 
 using Volo.Abp.Localization;
 
-namespace Ingos.SwaggerFinder.Web.Localization;
+namespace Enyard.Web.Localization;
 
 [LocalizationResourceName("SwaggerFinder")]
 public class SwaggerFinderResource

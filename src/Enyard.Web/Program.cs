@@ -1,7 +1,7 @@
 using Serilog;
 using Serilog.Events;
 
-namespace Ingos.SwaggerFinder.Web;
+namespace Enyard.Web;
 
 public class Program
 {
@@ -28,11 +28,11 @@ public class Program
                 .UseAutofac()
                 .UseSerilog();
 
-            await builder.AddApplicationAsync<IngosSwaggerFinderModule>();
+            await builder.AddApplicationAsync<EnyardModule>();
             var app = builder.Build();
             await app.InitializeApplicationAsync();
 
-            Log.Information("Starting Ingos.SwaggerFinder.Web.");
+            Log.Information("Starting Enyard.Web.");
 
             app.MapFallbackToFile("index.html");
             
@@ -46,7 +46,7 @@ public class Program
                 throw;
             }
 
-            Log.Fatal(ex, "Ingos.SwaggerFinder.Web terminated unexpectedly!");
+            Log.Fatal(ex, "Enyard.Web terminated unexpectedly!");
             return 1;
         }
         finally

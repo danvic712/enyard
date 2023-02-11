@@ -10,7 +10,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 
-namespace Ingos.AspNetCore.Swagger.Controllers
+namespace Enyard.Web.Controllers
 {
     [ApiController]
     [Route("api/portfolios/{portfolioId}")]

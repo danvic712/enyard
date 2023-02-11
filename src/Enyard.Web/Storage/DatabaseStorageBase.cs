@@ -8,11 +8,10 @@
 // Description:
 // -----------------------------------------------------------------------
 
-namespace Ingos.AspNetCore.Swagger.Abstractions.Storage
+namespace Enyard.Web.Storage
 {
     public abstract class DatabaseStorageBase
     {
     
     }
 }
-

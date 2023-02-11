@@ -8,16 +8,21 @@
 // Description:
 // -----------------------------------------------------------------------
 
-namespace Ingos.SwaggerFinder.Web.Models
+using Volo.Abp.Domain.Entities;
+
+namespace Enyard.Web.Entities
 {
-    public class Portfolio
+    /// <summary>
+    /// 
+    /// </summary>
+    public class Group : AggregateRoot<Guid>
     {
         #region Initializes
 
         /// <summary>
         /// ctor
         /// </summary>
-        protected Portfolio()
+        protected Group()
         {
         }
 
@@ -28,7 +33,8 @@ namespace Ingos.SwaggerFinder.Web.Models
         /// <param name="name">Portfolio name</param>
         /// <param name="description"></param>
         /// <exception cref="ArgumentNullException"></exception>
-        public Portfolio(Guid id, string name, string description)
+        public Group(Guid id, string name, string description)
+            : base(id)
         {
             if (string.IsNullOrEmpty(name))
                 throw new ArgumentNullException(nameof(name));
@@ -40,7 +46,7 @@ namespace Ingos.SwaggerFinder.Web.Models
             CreationTime = DateTime.UtcNow;
             LastUpdateTime = CreationTime;
 
-            Modules = new List<Module>();
+            Endpoints = new List<Endpoint>();
         }
 
         #endregion
@@ -75,19 +81,7 @@ namespace Ingos.SwaggerFinder.Web.Models
         /// <summary>
         /// Endpoints
         /// </summary>
-        public IList<Module> Modules { get; protected set; }
-
-        #endregion
-
-        #region Methods
-
-        public void AddModule()
-        {
-        }
-
-        public void Move()
-        {
-        }
+        public IList<Endpoint> Endpoints { get; protected set; }
 
         #endregion
     }

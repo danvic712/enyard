@@ -8,7 +8,10 @@
 // Description:
 // -----------------------------------------------------------------------
 
-namespace Ingos.SwaggerFinder.Web.Applications.Dtos
+using System;
+using System.Collections.Generic;
+
+namespace Enyard.Web.Applications.Dtos
 {
     /// <summary>
     /// 

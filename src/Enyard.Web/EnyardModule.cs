@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------
-// <copyright file= "IngosSwaggerFinderModule.cs">
+// <copyright file= "EnyardModule.cs">
 //     Copyright (c) Danvic.Wang All rights reserved.
 // </copyright>
 // Author: Danvic.Wang
@@ -9,7 +9,7 @@
 // -----------------------------------------------------------------------
 
 using System.Reflection;
-using Ingos.SwaggerFinder.Web.Localization;
+using Enyard.Web.Localization;
 using Microsoft.OpenApi.Models;
 using Volo.Abp;
 using Volo.Abp.AspNetCore.Mvc;
@@ -23,7 +23,7 @@ using Volo.Abp.Swashbuckle;
 using Volo.Abp.Validation.Localization;
 using Volo.Abp.VirtualFileSystem;
 
-namespace Ingos.SwaggerFinder.Web;
+namespace Enyard.Web;
 
 [DependsOn(
     // ABP Framework packages
@@ -33,7 +33,7 @@ namespace Ingos.SwaggerFinder.Web;
     typeof(AbpSwashbuckleModule),
     typeof(AbpAspNetCoreSerilogModule)
 )]
-public class IngosSwaggerFinderModule : AbpModule
+public class EnyardModule : AbpModule
 {
     #region Configurations
 
@@ -104,10 +104,10 @@ public class IngosSwaggerFinderModule : AbpModule
     {
         Configure<AbpVirtualFileSystemOptions>(options =>
         {
-            options.FileSets.AddEmbedded<IngosSwaggerFinderModule>();
+            options.FileSets.AddEmbedded<EnyardModule>();
             if (hostingEnvironment.IsDevelopment())
                 /* Using physical files in development, so we don't need to recompile on changes */
-                options.FileSets.ReplaceEmbeddedByPhysical<IngosSwaggerFinderModule>(hostingEnvironment
+                options.FileSets.ReplaceEmbeddedByPhysical<EnyardModule>(hostingEnvironment
                     .ContentRootPath);
         });
     }
@@ -125,7 +125,7 @@ public class IngosSwaggerFinderModule : AbpModule
                         Email = "danvic.wang@outlook.com",
                         Url = new Uri("https://yuiter.com")
                     },
-                    Title = "Ingos SwaggerFinder API",
+                    Title = "Enyard API",
                     Version = "v1"
                 });
                 options.DocInclusionPredicate((docName, description) => true);
@@ -144,14 +144,14 @@ public class IngosSwaggerFinderModule : AbpModule
 
     private void ConfigureAutoMapper(ServiceConfigurationContext context)
     {
-        context.Services.AddAutoMapperObjectMapper<IngosSwaggerFinderModule>();
+        context.Services.AddAutoMapperObjectMapper<EnyardModule>();
         Configure<AbpAutoMapperOptions>(options =>
         {
             /* Uncomment `validate: true` if you want to enable the Configuration Validation feature.
              * See AutoMapper's documentation to learn what it is:
              * https://docs.automapper.org/en/stable/Configuration-validation.html
              */
-            options.AddMaps<IngosSwaggerFinderModule>( /* validate: true */);
+            options.AddMaps<EnyardModule>( /* validate: true */);
         });
     }
 

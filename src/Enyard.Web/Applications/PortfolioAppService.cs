@@ -8,12 +8,12 @@
 // Description:
 // -----------------------------------------------------------------------
 
-using Ingos.SwaggerFinder.Web.Applications.Contracts;
-using Ingos.SwaggerFinder.Web.Applications.Dtos;
+using Enyard.Web.Applications.Contracts;
+using Enyard.Web.Applications.Dtos;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 
-namespace Ingos.SwaggerFinder.Web.Applications;
+namespace Enyard.Web.Applications;
 
 public class PortfolioAppService: ApplicationService, IPortfolioAppService
 {

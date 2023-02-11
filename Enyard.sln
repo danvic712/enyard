@@ -4,9 +4,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{657604E9-28D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C9B6D0A4-41AB-4829-AB92-44ADCC4F8138}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ingos.SwaggerFinder.Web", "src\Ingos.SwaggerFinder.Web\Ingos.SwaggerFinder.Web.csproj", "{91015B3D-1427-430B-BB0C-707706BB0666}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enyard.Web", "src\Enyard.Web\Enyard.Web.csproj", "{91015B3D-1427-430B-BB0C-707706BB0666}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ingos.SwaggerFinder.Tests", "test\Ingos.SwaggerFinder.Tests\Ingos.SwaggerFinder.Tests.csproj", "{12A8AEAE-6EB7-45D9-939A-E396133F86C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enyard.Tests", "test\Enyard.Tests\Enyard.Tests.csproj", "{12A8AEAE-6EB7-45D9-939A-E396133F86C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

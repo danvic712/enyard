@@ -8,7 +8,7 @@
 // Description:
 // -----------------------------------------------------------------------
 
-namespace Ingos.SwaggerFinder.Web.Applications.Dtos
+namespace Enyard.Web.Applications.Dtos
 {
     public class ResourceOperationDto<T> where T : class
     {

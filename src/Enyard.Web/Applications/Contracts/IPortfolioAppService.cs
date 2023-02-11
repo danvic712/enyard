@@ -8,11 +8,11 @@
 // Description:
 // -----------------------------------------------------------------------
 
-using Ingos.SwaggerFinder.Web.Applications.Dtos;
+using Enyard.Web.Applications.Dtos;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 
-namespace Ingos.SwaggerFinder.Web.Applications.Contracts;
+namespace Enyard.Web.Applications.Contracts;
 
 public interface IPortfolioAppService : IApplicationService
 {
