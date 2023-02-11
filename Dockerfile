@@ -13,11 +13,11 @@ RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash - \
 # Copy src folder contents to the build path
 COPY ./src /app
 
-WORKDIR /app/Ingos.SwaggerFinder.Web
+WORKDIR /app/Enyard.Web
 RUN dotnet publish -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-ENTRYPOINT ["dotnet", "Ingos.SwaggerFinder.Web.dll"]
+ENTRYPOINT ["dotnet", "Enyard.Web.dll"]
