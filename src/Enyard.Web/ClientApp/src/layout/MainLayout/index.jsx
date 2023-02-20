@@ -16,7 +16,6 @@ import { drawerWidth } from '../../store/constant';
 import { SET_MENU } from '../../store/actions';
 
 // assets
-// import { IconChevronRight } from '@tabler/icons';
 import { ForkRight } from '@mui/icons-material'
 
 // styles

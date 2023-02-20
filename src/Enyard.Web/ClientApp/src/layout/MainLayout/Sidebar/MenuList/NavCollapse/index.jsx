@@ -11,7 +11,7 @@ import NavItem from '../NavItem';
 
 // assets
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import { ChevronLeftRounded, ChevronRightRounded } from '@mui/icons-material';
+import { KeyboardArrowUpRounded, KeyboardArrowDownRounded } from '@mui/icons-material';
 
 // ==============================|| SIDEBAR MENU LIST COLLAPSE ITEMS ||============================== //
 
@@ -86,9 +86,9 @@ const NavCollapse = ({ menu, level }) => {
                     }
                 />
                 {open ? (
-                    <ChevronRightRounded stroke={1.5} size="1rem" style={{ marginTop: 'auto', marginBottom: 'auto' }} />
+                    <KeyboardArrowUpRounded stroke={1.5} size="1rem" style={{ marginTop: 'auto', marginBottom: 'auto' }} />
                 ) : (
-                    <ChevronLeftRounded stroke={1.5} size="1rem" style={{ marginTop: 'auto', marginBottom: 'auto' }} />
+                    <KeyboardArrowDownRounded stroke={1.5} size="1rem" style={{ marginTop: 'auto', marginBottom: 'auto' }} />
                 )}
             </ListItemButton>
             <Collapse in={open} timeout="auto" unmountOnExit>

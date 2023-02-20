@@ -37,7 +37,7 @@ import UpgradePlanCard from './UpgradePlanCard';
 import User1 from '../../../../assets/images/users/user-round.svg';
 
 // assets
-import { Logout, Search, Settings, UsbRounded } from '@mui/icons-material';
+import { Logout, Search, Settings, PersonOutlineRounded } from '@mui/icons-material';
 
 // ==============================|| PROFILE MENU ||============================== //
 
@@ -172,7 +172,7 @@ const ProfileSection = () => {
                                             placeholder="Search profile options"
                                             startAdornment={
                                                 <InputAdornment position="start">
-                                                    <IconSearch stroke={1.5} size="1rem" color={theme.palette.grey[500]} />
+                                                    <Search stroke={1.5} size="1rem" color={theme.palette.grey[500]} />
                                                 </InputAdornment>
                                             }
                                             aria-describedby="search-helper-text"
@@ -261,7 +261,7 @@ const ProfileSection = () => {
                                                     onClick={(event) => handleListItemClick(event, 1, '/user/social-profile/posts')}
                                                 >
                                                     <ListItemIcon>
-                                                        <IconUser stroke={1.5} size="1.3rem" />
+                                                        <PersonOutlineRounded stroke={1.5} size="1.3rem" />
                                                     </ListItemIcon>
                                                     <ListItemText
                                                         primary={
