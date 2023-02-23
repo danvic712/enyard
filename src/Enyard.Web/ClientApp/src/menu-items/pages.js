@@ -19,7 +19,6 @@ const pages = {
             title: 'Authentication',
             type: 'collapse',
             icon: icons.Key,
-
             children: [
                 {
                     id: 'login3',
