@@ -7,13 +7,12 @@ import { styled, useTheme } from '@mui/material/styles';
 import { AppBar, Box, CssBaseline, Toolbar, useMediaQuery } from '@mui/material';
 
 // project imports
-import Breadcrumbs from '../../ui-component/extended/Breadcrumbs';
+import Breadcrumbs from '@/components/extended/Breadcrumbs';
 import Header from './Header';
 import Sidebar from './Sidebar';
-import Customization from '../Customization';
-import navigation from '../../menu-items/index';
-import { drawerWidth } from '../../store/constant';
-import { SET_MENU } from '../../store/actions';
+import navigation from '@/routes/menu.js';
+import { drawerWidth } from '@/store/constant';
+import { SET_MENU } from '@/store/actions';
 
 // assets
 import { ForkRight } from '@mui/icons-material'
@@ -108,7 +107,6 @@ const MainLayout = () => {
                 <Breadcrumbs separator={ForkRight} navigation={navigation} icon title rightAlign />
                 <Outlet />
             </Main>
-            <Customization />
         </Box>
     );
 };

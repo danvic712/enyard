@@ -3,7 +3,7 @@ import { Typography } from '@mui/material';
 
 // project imports
 import NavGroup from './NavGroup';
-import menuItem from '../../../../menu-items/index';
+import menuItem from '@/routes/menu.js';
 
 // ==============================|| SIDEBAR MENU LIST ||============================== //
 
