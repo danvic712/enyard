@@ -36,7 +36,7 @@ axiosInstance.interceptors.response.use(
             return Promise.reject(new Error(response.Message || 'Error'))
         }
 
-        return response;
+        return response.data;
     },
     error => {
         console.error('An error occurred while requesting api:' + error)

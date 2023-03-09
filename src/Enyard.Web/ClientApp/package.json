@@ -5,8 +5,8 @@
   "author": "Danvic Wang",
   "license": "MIT",
   "scripts": {
-    "start": "echo Starting the development server && vite --host ::",
-    "dev": "vite",
+    "start": "echo Starting the development server && vite --mode development --host ::",
+    "dev": "vite --mode development",
     "build": "vite build",
     "preview": "vite preview"
   },

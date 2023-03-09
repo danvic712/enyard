@@ -1,5 +1,5 @@
 // project imports
-import config from '../config';
+import config from '../AppSettings';
 
 // action - state management
 import * as actionTypes from './actions';

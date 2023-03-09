@@ -9,7 +9,7 @@ import { store } from './store/index';
 
 // style + assets
 import './assets/scss/style.scss';
-import config from './config';
+import config from './AppSettings';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

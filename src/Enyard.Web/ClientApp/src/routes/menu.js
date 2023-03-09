@@ -1,8 +1,10 @@
 // assets
-import { Dashboard, LaptopChromebookRounded, Help, Key } from "@mui/icons-material";
+import { Dashboard, Help, Key, FolderRounded, Api } from "@mui/icons-material";
 
 // constant
-const icons = { Dashboard, LaptopChromebookRounded, Help, Key };
+const icons = { Dashboard, Help, Key, FolderRounded, Api };
+
+console.log('------',import.meta.DEV);
 
 const menuItems = {
     items: [
@@ -12,7 +14,7 @@ const menuItems = {
             type: 'group',
             children: [
                 {
-                    id: 'default',
+                    id: 'dashboard',
                     title: 'Dashboard',
                     type: 'item',
                     url: '/dashboard',
@@ -22,46 +24,32 @@ const menuItems = {
             ]
         },
         {
-            id: 'pages',
-            title: 'Pages',
-            caption: 'Pages Caption',
+            id: 'portfolios',
+            title: 'Portfolios',
             type: 'group',
-            children: [
-                {
-                    id: 'authentication',
-                    title: 'Authentication',
-                    type: 'collapse',
-                    icon: icons.Key,
-                    children: [
-                        {
-                            id: 'login3',
-                            title: 'Login',
-                            type: 'item',
-                            url: '/pages/login/login3',
-                            target: true
-                        },
-                        {
-                            id: 'register3',
-                            title: 'Register',
-                            type: 'item',
-                            url: '/pages/register/register3',
-                            target: true
-                        }
-                    ]
-                }
-            ]
+            children: [{
+
+                id: 'portfolios',
+                title: 'Summary',
+                type: 'item',
+                url: '/portfolios',
+                icon: icons.FolderRounded,
+                breadcrumbs: false
+            }]
         },
         {
-            id: 'sample-docs-roadmap',
+            id: 'links',
+            title: 'Links',
             type: 'group',
             children: [
                 {
-                    id: 'sample-page',
-                    title: 'Sample Page',
+                    id: 'enyard',
+                    title: 'Enyard Swagger',
                     type: 'item',
-                    url: '/sample-page',
-                    icon: icons.LaptopChromebookRounded,
-                    breadcrumbs: false
+                    url: import.meta.DEV ? 'https://localhost:7188' : '/swagger',
+                    icon: icons.Api,
+                    external: true,
+                    target: true
                 },
                 {
                     id: 'documentation',

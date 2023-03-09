@@ -7,8 +7,8 @@ import Loadable from '../components/Loadable';
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('../pages/dashboard')));
 
-// sample page routing
-const SamplePage = Loadable(lazy(() => import('../pages/sample-page')));
+
+const PortfolioSummary = Loadable(lazy(() => import('../pages/portfolio/Summary.jsx')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -30,8 +30,13 @@ const MainRoutes = {
             ]
         },
         {
-            path: 'sample-page',
-            element: <SamplePage />
+            path: 'portfolios',
+            children: [
+                {
+                    path: '',
+                    element: <PortfolioSummary />
+                }
+            ]
         }
     ]
 };
